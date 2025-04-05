@@ -16,6 +16,5 @@ Once Eigen and OSQP are installed, run the MATLAB script in the scripts folder. 
 with $H \in \mathbb{R}^{2 \times 2}$, $g \in \mathbb{R}^{2}$, $A \in \mathbb{R}^{3 \times 2}$, $b \in \mathbb{R}^{3}$ being input parameters to the generated function. Once the source and header are generated, put the source in the /lib directory and header in the /include directory. Then build the code using CMake:
 ```
 mkdir build && cd build
-cd build
 make -j$(nproc)
 ```
