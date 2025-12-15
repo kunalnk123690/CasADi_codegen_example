@@ -31,6 +31,9 @@ codegen_opts.with_mem = true;
 codegen_opts.with_header = true;
 F.generate('solveQP.c', codegen_opts)
 
-% Hessian = diag([2 8]);
-% grad = [-8 -16]';
-% sol = F(Hessian, grad)
+% Test the generated function
+Hessian = diag([2 8]);
+grad = [-8 -16]';
+A_con = [1, 1; 1, 0; 0, 1];
+b_con = [5, 3, 0]';
+sol = full(F(Hessian, grad, A_con, b_con))

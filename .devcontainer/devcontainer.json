@@ -1,0 +1,24 @@
+{
+    "name": "Development Container for Building Casadi Codegen Projects",
+    "privileged": true,
+    "remoteUser": "codegen",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/home/codegen/codegen_ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/codegen/codegen_ws,type=bind",
+    "customizations": {
+        "vscode": {
+            "extensions":[
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cmake-tools",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "containerEnv": {
+        "CMAKE_GENERATOR": "Ninja"
+    }
+}
