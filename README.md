@@ -22,7 +22,6 @@ The QP is of the form:
 with $H$, $g$, $A$, $b$ being input parameters to the generated function. Once the source and header are generated, put the source in the /lib directory and header in the /include directory. Then build the code using CMake:
 ```
 mkdir build && cd build
-cd build
 make -j$(nproc)
 ```
 
